@@ -6,3 +6,7 @@
   border: 3px solid orangered;
   border-radius: 15px;
 }
+
+.country img {
+  margin: 25px 0;
+}
