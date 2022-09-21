@@ -1,0 +1,8 @@
+.country {
+  padding: 15px;
+  background-color: orange;
+  text-align: center;
+
+  border: 3px solid orangered;
+  border-radius: 15px;
+}
