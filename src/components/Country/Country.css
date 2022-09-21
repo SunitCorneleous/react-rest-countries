@@ -5,8 +5,24 @@
 
   border: 3px solid orangered;
   border-radius: 15px;
+  margin: 0 auto;
 }
 
 .country img {
+  width: 80%;
   margin: 25px 0;
+}
+.country:hover {
+  background-color: rgb(235, 175, 63);
+}
+
+@media screen and (max-width: 850px) {
+  .country {
+    min-width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .country {
+    min-width: 80%;
+  }
 }

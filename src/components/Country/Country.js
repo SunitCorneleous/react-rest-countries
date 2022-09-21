@@ -8,9 +8,9 @@ const Country = props => {
     <div className="country">
       <h1>Name: {name.common}</h1>
       <img src={flags.png} alt="flag" />
-      <h3>Capital: {capital}</h3>
-      <h3>Area: {area} sq. km</h3>
-      <h3>Continent: {continents}</h3>
+      <h2>Capital: {capital}</h2>
+      <h2>Area: {area} sq. km</h2>
+      <h2>Continent: {continents}</h2>
     </div>
   );
 };
