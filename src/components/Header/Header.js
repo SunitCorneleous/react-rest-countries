@@ -4,10 +4,23 @@ import "./Header.css";
 
 const Header = ({ countries, handler }) => {
   const [input, setInput] = useState("");
+  const [filter, setFilter] = useState("");
 
   const inputButtonHandler = () => {
-    handler(input);
-    setInput("");
+    if (filter === "all" || filter === "") {
+      handler(`name/${input}`);
+      setInput("");
+    } else if (filter === "region") {
+      handler(`region/${input}`);
+      setInput("");
+    } else if (filter === "capital") {
+      handler(`capital/${input}`);
+      setInput("");
+    }
+  };
+
+  const filterHandler = value => {
+    setFilter(value);
   };
 
   return (
@@ -21,6 +34,42 @@ const Header = ({ countries, handler }) => {
         />
         <button onClick={inputButtonHandler}>Search</button>
       </div>
+      <fieldset className="radio-buttons">
+        <legend>Search by:</legend>
+
+        <div>
+          <input
+            type="radio"
+            id="all"
+            name="drone"
+            value="all"
+            onChange={e => filterHandler(e.target.value)}
+          />
+          <label htmlFor="all">All</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="continent"
+            name="drone"
+            value="region"
+            onChange={e => filterHandler(e.target.value)}
+          />
+          <label htmlFor="continent">Continent</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="capital"
+            name="drone"
+            value="capital"
+            onChange={e => filterHandler(e.target.value)}
+          />
+          <label htmlFor="capital">Capital</label>
+        </div>
+      </fieldset>
     </div>
   );
 };
