@@ -32,7 +32,9 @@ const Header = ({ countries, handler }) => {
           onChange={e => setInput(e.target.value)}
           value={input}
         />
-        <button onClick={inputButtonHandler}>Search</button>
+        <button onClick={inputButtonHandler} disabled={!input}>
+          Search
+        </button>
       </div>
       <fieldset className="radio-buttons">
         <legend>Search by:</legend>
