@@ -14,9 +14,13 @@ const Countries = () => {
       .catch(err => console.log(err));
   }, [search]);
 
+  const searchHandler = input => {
+    setSearch(`name/${input}`);
+  };
+
   return (
     <>
-      <Header countries={countries}></Header>
+      <Header countries={countries} handler={searchHandler}></Header>
       <div className="countries">
         {countries.map(country => (
           <Country key={country.cca3} country={country} />

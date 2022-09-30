@@ -6,4 +6,5 @@
 .App {
   background-color: rgb(207, 178, 123);
   font-family: "Merriweather", serif;
+  height: 100vh;
 }
