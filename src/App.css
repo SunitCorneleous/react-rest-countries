@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@300;400;600&family=Merriweather:wght@400;700;900&display=swap");
+
 * {
   margin: 0;
 }
 .App {
   background-color: rgb(207, 178, 123);
+  font-family: "Merriweather", serif;
 }

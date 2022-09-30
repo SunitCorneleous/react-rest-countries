@@ -6,11 +6,11 @@ const Country = props => {
 
   return (
     <div className="country">
-      <h1>Name: {name.common}</h1>
+      <h2>{name.common}</h2>
       <img src={flags.png} alt="flag" />
-      <h2>Capital: {capital}</h2>
-      <h2>Area: {area} sq. km</h2>
-      <h2>Continent: {continents}</h2>
+      <h3>Capital: {capital}</h3>
+      <h3>Area: {area} sq. km</h3>
+      <h3>Continent: {continents}</h3>
     </div>
   );
 };

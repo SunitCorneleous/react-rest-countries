@@ -8,6 +8,10 @@
   margin: 0 auto;
 }
 
+.country h2 {
+  font-size: 1.8rem;
+}
+
 .country img {
   width: 80%;
   margin: 25px 0;
