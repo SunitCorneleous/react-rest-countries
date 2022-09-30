@@ -5,13 +5,14 @@ import Header from "../Header/Header";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState("all");
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    fetch(`https://restcountries.com/v3.1/${search}`)
       .then(res => res.json())
       .then(data => setCountries(data))
       .catch(err => console.log(err));
-  }, []);
+  }, [search]);
 
   return (
     <>
